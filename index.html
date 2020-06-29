@@ -23,14 +23,6 @@
         #nav-tool {
             margin-bottom: 0px;
         }
-
-        #show-test-tool {
-            position: absolute;
-            top: 100px;
-            left: 0;
-            display: block;
-            z-index: 99999;        
-        }
     </style>
 
     <nav id="nav-tool" class="navbar navbar-inverse navbar-fixed-top">
@@ -84,24 +76,6 @@
         </div>
     </nav>
 
-    
-    <div id="show-test-tool">
-        <button type="submit" class="btn btn-primary" id="show-test-tool-btn" title="show or hide top test tool">Show</button>
-    </div>
-    <script>
-        document.getElementById('show-test-tool-btn').addEventListener("click", function(e){
-            var textContent = e.target.textContent;
-            if (textContent === 'Show') {
-                document.getElementById('nav-tool').style.display = 'block';
-                document.getElementById('show-test-tool-btn').textContent = 'Hide';
-            }
-            else {
-                document.getElementById('nav-tool').style.display = 'none';
-                document.getElementById('show-test-tool-btn').textContent = 'Show';
-            }
-        })
-    </script>
-
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="https://source.zoom.us/1.7.8/lib/vendor/react.min.js"></script>
     <script src="https://source.zoom.us/1.7.8/lib/vendor/react-dom.min.js"></script>
@@ -114,9 +88,6 @@
     <script src="js/tool.js"></script>
     <script src="js/index.js"></script>
 
-    <script>
-
-    </script>
 </body>
 
 </html>
