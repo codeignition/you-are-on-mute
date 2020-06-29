@@ -66,7 +66,7 @@
         .then(function (response) {
           console.log(response);
           ZoomMtg.init({
-              leaveUrl: 'http://www.zoom.us',
+              leaveUrl: window.location.host,
               success: function () {
                   ZoomMtg.join(
                       {
