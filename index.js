@@ -38,9 +38,8 @@ app.get('/', function(req, res) {
 
 
 app.get('/login', (req, res) => {
-    res.redirect('https://zoom.us/oauth/authorize?response_type=code&client_id=' + process.env.CLIENT_ID + '&redirect_uri=' + process.env.REDIRECT_URL)
+    res.sendFile(path.join(__dirname + '/login.html'));
 });
-
 
 
 app.get('/redirect', (req, res) => {
@@ -61,7 +60,7 @@ app.get('/redirect', (req, res) => {
             if (body.access_token) {
                 console.log(body);
                 res.cookie('access_token', body.access_token, {maxAge: 9000000});
-                res.send('token set')
+                res.redirect('/')
             } else {
                 // Handle errors, something's gone wrong!
                 console.error(body);
@@ -73,5 +72,6 @@ app.get('/redirect', (req, res) => {
         return;
 
     }
+    res.redirect('https://zoom.us/oauth/authorize?response_type=code&client_id=' + process.env.CLIENT_ID + '&redirect_uri=' + process.env.REDIRECT_URL)
 });
 
