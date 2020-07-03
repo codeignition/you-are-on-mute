@@ -5,11 +5,11 @@
 
     // it's option if you want to change the WebSDK dependency link resources. setZoomJSLib must be run at first
     // if (!china) ZoomMtg.setZoomJSLib('https://source.zoom.us/1.7.8/lib', '/av'); // CDN version default
-    // else ZoomMtg.setZoomJSLib('https://jssdk.zoomus.cn/1.7.8/lib', '/av'); // china cdn option 
+    // else ZoomMtg.setZoomJSLib('https://jssdk.zoomus.cn/1.7.8/lib', '/av'); // china cdn option
     // ZoomMtg.setZoomJSLib('http://localhost:9999/node_modules/@zoomus/websdk/dist/lib', '/av'); // Local version default, Angular Project change to use cdn version
     ZoomMtg.preLoadWasm();
     ZoomMtg.prepareJssdk();
-    
+
     var API_KEY = 'rYw9P79tQe2Rx693q_6zOQ';
 
     /**
@@ -23,13 +23,13 @@
     document.getElementById('meeting_number').value = testTool.getCookie("meeting_number");
     document.getElementById('meeting_pwd').value = testTool.getCookie("meeting_pwd");
     if (testTool.getCookie("meeting_lang")) document.getElementById('meeting_lang').value = testTool.getCookie("meeting_lang");
-   
+
     document.getElementById('meeting_lang').addEventListener('change', function(e){
         testTool.setCookie("meeting_lang", document.getElementById('meeting_lang').value);
         $.i18n.reload(document.getElementById('meeting_lang').value);
         ZoomMtg.reRender({lang: document.getElementById('meeting_lang').value});
     });
-    
+
     document.getElementById('clear_all').addEventListener('click', function(e) {
         testTool.deleteAllCookies();
         document.getElementById('display_name').value = '';
@@ -96,4 +96,10 @@
 
     });
 
-})();
+    document.getElementById('start_new_meeting').addEventListener('click', function(e) {
+        window.location = "/login";
+        e.preventDefault();
+
+    })
+
+    })();
