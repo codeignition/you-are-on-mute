@@ -117,7 +117,7 @@
                 leaveUrl: "https://zoom.us",
                 role: 1
             };
-
+            console.log(meetConfig);
             axios.post('/signature', {
                 meetingNumber: meetConfig.meetingNumber,
                 role: meetConfig.role
@@ -152,7 +152,7 @@
                     console.log(error);
                 });
         }).catch(function (error) {
-            if(error.response.status) {
+            if(error.response.status == 401) {
                 window.location = '/login'
             }
         });

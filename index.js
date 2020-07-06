@@ -61,7 +61,7 @@ app.get('/redirect', (req, res) => {
 
             if (body.access_token) {
                 console.log(body);
-                res.cookie('access_token', body.access_token, {maxAge: 9000000, httpOnly: true});
+                res.cookie('access_token', body.access_token, {maxAge: 1800000, httpOnly: true});
 
                 request.get('https://api.zoom.us/v2/users/me', (error, response, body) => {
                     if (error) {
@@ -99,8 +99,11 @@ app.post('/meetings', (req, res) => {
 
         let url = 'https://api.zoom.us/v2/users/me/meetings';
         let data = {
-            topic: "",
-            type: 1,
+            topic: "Zoom Meeting",
+            type: 2,
+            settings: {
+                join_before_host: true
+            }
         };
         request.post(url, {json: data}, (error, response, body) => {
             if (error) {
