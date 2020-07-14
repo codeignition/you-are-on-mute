@@ -10,7 +10,7 @@
     ZoomMtg.preLoadWasm();
     ZoomMtg.prepareJssdk();
 
-    var API_KEY = 'rYw9P79tQe2Rx693q_6zOQ';
+    var API_KEY = 'DiUMzQHyQm-soHXWl8DmMA';
 
     /**
      * NEVER PUT YOUR ACTUAL API SECRET IN CLIENT SIDE CODE, THIS IS JUST FOR QUICK PROTOTYPING
@@ -40,6 +40,9 @@
     });
 
     document.getElementById('join_meeting').addEventListener('click', function (e) {
+
+        ZoomMtg.preLoadWasm();
+        ZoomMtg.prepareJssdk();
 
         e.preventDefault();
 
@@ -113,7 +116,7 @@
                 apiKey: API_KEY,
                 meetingNumber: response.data.id,
                 userName: 'Hello',
-                passWord: response.data.password,
+                passWord: '12345678-a',
                 leaveUrl: "https://zoom.us",
                 role: 1
             };

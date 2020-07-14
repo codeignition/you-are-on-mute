@@ -103,7 +103,8 @@ app.post('/meetings', (req, res) => {
             type: 2,
             settings: {
                 join_before_host: true
-            }
+            },
+            password: "12345678-a"
         };
         request.post(url, {json: data}, (error, response, body) => {
             if (error) {
