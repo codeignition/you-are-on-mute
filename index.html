@@ -2,96 +2,114 @@
 
 <head>
     <title>Zoom WebSDK</title>
-    <meta charset="utf-8" />
-    <link type="text/css" rel="stylesheet" href="https://source.zoom.us/1.7.8/css/bootstrap.css" />
-    <link type="text/css" rel="stylesheet" href="https://source.zoom.us/1.7.8/css/react-select.css" />
+    <meta charset="utf-8"/>
+    <link type="text/css" rel="stylesheet" href="https://source.zoom.us/1.7.8/css/bootstrap.css"/>
+    <link type="text/css" rel="stylesheet" href="https://source.zoom.us/1.7.8/css/react-select.css"/>
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/workflow.css">
     <meta name="format-detection" content="telephone=no">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 </head>
 
 <body>
-    <style>
-        .sdk-select {
-            height: 34px;
-            border-radius: 4px;
-        }
+<style>
+    .sdk-select {
+        height: 34px;
+        border-radius: 4px;
+    }
 
-		.websdktest button {
-            float: right;
-            margin-left: 5px;
-        }
-        #nav-tool {
-            margin-bottom: 0px;
-        }
-    </style>
+    .websdktest button {
+        float: right;
+        margin-left: 5px;
+    }
 
-    <nav id="nav-tool" class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <a class="navbar-brand" href="#">Zoom</a>
-            </div>
-            <div id="navbar" class="websdktest">
-                <form class="navbar-form navbar-right" id="meeting_form">
-                    <div class="form-group">
-                        <input type="text" name="display_name" id="display_name" value="1.7.8#CDN" maxLength="100"
-                            placeholder="Name" class="form-control" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="text" name="meeting_number" id="meeting_number" value="" maxLength="11"
-                            style="width:150px" placeholder="Meeting Number" class="form-control" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="text" name="meeting_pwd" id="meeting_pwd" value="" style="width:150px"
-                            maxLength="32" placeholder="Meeting Password" class="form-control">
-                    </div>
-
-                    <div class="form-group">
-                        <select id="meeting_role" class="sdk-select">
-                            <option value=0>Attendee</option>
-                            <option value=1>Host</option>
-                            <option value=5>Assistant</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <select id="meeting_lang" class="sdk-select">
-                            <option value="en-US">English</option>
-                            <option value="de-DE">German Deutsch</option>
-                            <option value="es-ES">Spanish Español</option>
-                            <option value="fr-FR">French Français</option>
-                            <option value="jp-JP">Japanese 日本語</option>
-                            <option value="pt-PT">Portuguese Portuguese</option>
-                            <option value="ru-RU">Russian Русский</option>
-                            <option value="zh-CN">Chinese 简体中文</option>
-                            <option value="zh-TW">Chinese 繁体中文</option>
-                            <option value="ko-KO">Korean 한국어</option>
-                        </select>
-                    </div>
-                    <button  class="btn btn-success" id="start_new_meeting">Start new Meeting</button>
-                    <button type="submit" class="btn btn-primary" id="join_meeting">Join</button>
-                    <button type="submit" class="btn btn-primary" id="clear_all">Clear</button>
+    #nav-tool {
+        margin-bottom: 0px;
+    }
 
 
-                </form>
 
-            </div>
-            <!--/.navbar-collapse -->
+</style>
+
+<div id="overlay">
+    <button id="overlay-add-agenda">
+        Add Agenda
+    </button>
+</div>
+
+
+<div id="overlay-checklist">
+</div>
+
+
+<nav id="nav-tool" class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">Zoom</a>
         </div>
-    </nav>
+        <div id="navbar" class="websdktest">
+            <form class="navbar-form navbar-right" id="meeting_form">
+                <div class="form-group">
+                    <input type="text" name="display_name" id="display_name" value="1.7.8#CDN" maxLength="100"
+                           placeholder="Name" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <input type="text" name="meeting_number" id="meeting_number" value="" maxLength="11"
+                           style="width:150px" placeholder="Meeting Number" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <input type="text" name="meeting_pwd" id="meeting_pwd" value="" style="width:150px"
+                           maxLength="32" placeholder="Meeting Password" class="form-control">
+                </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <script src="https://source.zoom.us/1.7.8/lib/vendor/react.min.js"></script>
-    <script src="https://source.zoom.us/1.7.8/lib/vendor/react-dom.min.js"></script>
-    <script src="https://source.zoom.us/1.7.8/lib/vendor/redux.min.js"></script>
-    <script src="https://source.zoom.us/1.7.8/lib/vendor/redux-thunk.min.js"></script>
-    <script src="https://source.zoom.us/1.7.8/lib/vendor/jquery.min.js"></script>
-    <script src="https://source.zoom.us/1.7.8/lib/vendor/lodash.min.js"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+                <div class="form-group">
+                    <select id="meeting_role" class="sdk-select">
+                        <option value=0>Attendee</option>
+                        <option value=1>Host</option>
+                        <option value=5>Assistant</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <select id="meeting_lang" class="sdk-select">
+                        <option value="en-US">English</option>
+                        <option value="de-DE">German Deutsch</option>
+                        <option value="es-ES">Spanish Español</option>
+                        <option value="fr-FR">French Français</option>
+                        <option value="jp-JP">Japanese 日本語</option>
+                        <option value="pt-PT">Portuguese Portuguese</option>
+                        <option value="ru-RU">Russian Русский</option>
+                        <option value="zh-CN">Chinese 简体中文</option>
+                        <option value="zh-TW">Chinese 繁体中文</option>
+                        <option value="ko-KO">Korean 한국어</option>
+                    </select>
+                </div>
+                <button class="btn btn-success" id="start_new_meeting">Start new Meeting</button>
+                <button type="submit" class="btn btn-primary" id="join_meeting">Join</button>
+                <button type="submit" class="btn btn-primary" id="clear_all">Clear</button>
 
 
-    <script src="https://source.zoom.us/zoom-meeting-1.7.10.min.js"></script>
-    <script src="js/tool.js"></script>
-    <script src="js/index.js"></script>
+            </form>
+
+        </div>
+        <!--/.navbar-collapse -->
+    </div>
+</nav>
+
+
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="https://source.zoom.us/1.7.8/lib/vendor/react.min.js"></script>
+<script src="https://source.zoom.us/1.7.8/lib/vendor/react-dom.min.js"></script>
+<script src="https://source.zoom.us/1.7.8/lib/vendor/redux.min.js"></script>
+<script src="https://source.zoom.us/1.7.8/lib/vendor/redux-thunk.min.js"></script>
+<script src="https://source.zoom.us/1.7.8/lib/vendor/jquery.min.js"></script>
+<script src="https://source.zoom.us/1.7.8/lib/vendor/lodash.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+
+
+<script src="https://source.zoom.us/zoom-meeting-1.7.10.min.js"></script>
+<script src="js/tool.js"></script>
+<script src="js/index.js"></script>
+<script src="js/workflow.js"></script>
 
 </body>
 

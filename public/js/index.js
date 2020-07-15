@@ -81,6 +81,8 @@
                                 success: function (res) {
                                     $('#nav-tool').hide();
                                     console.log('join meeting success');
+                                    $('#overlay').css("display", "block");
+                                    console.log('showing overlay')
                                 },
                                 error: function (res) {
                                     console.log(res);

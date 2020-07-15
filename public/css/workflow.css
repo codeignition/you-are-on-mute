@@ -1,0 +1,27 @@
+#overlay {
+    position: fixed;
+    display: none;
+    bottom: 100px;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 2;
+    cursor: pointer;
+    right: 100px;
+}
+
+#overlay-add-agenda {
+    margin: 10px;
+    padding: 10px;
+    background-color: #27874c;
+    color: white;
+}
+
+#overlay-checklist {
+    position: fixed;
+    top: 200px;
+    z-index: 2;
+    left: 100px;
+}
+
+.checklist-item {
+    padding: 10px;
+}
