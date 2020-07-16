@@ -122,3 +122,7 @@ app.post('/meetings', (req, res) => {
         res.status(401).send('noauth');
     }
 });
+
+app.get('/workflow-example', function (req, res) {
+    res.sendFile(path.join(__dirname + '/workflow-example.html'));
+});

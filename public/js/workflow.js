@@ -37,9 +37,9 @@
       ]
     };
 
-  const overlayAddAgendaButton = '<div id="overlay"><button id="overlay-add-agenda">Add Agenda</button></div>';
-  const checkListContainer = '<div id="overlay-checklist"></div>';
-  const timeCheckContainer = '<div id="overlay-timecheck"><h2>this is a timecheck</h2><img src="/images/timecheck.png"></div>';
+  const overlayAddAgendaButton = '<div id="overlay" class="workflow"><button id="overlay-add-agenda">Add Agenda</button></div>';
+  const checkListContainer = '<div id="overlay-checklist" class="workflow"></div>';
+  const timeCheckContainer = '<div id="overlay-timecheck" class="workflow"><h2>this is a timecheck</h2><img src="/images/timecheck.png"></div>';
 
   var workflowContainers = overlayAddAgendaButton +  checkListContainer + timeCheckContainer;
 
@@ -56,7 +56,7 @@
     for(var i =0;i <workflow.topics.length; i++) {
       var topic = workflow.topics[i];
       var topicID = "topic-" + i;
-      checklistHTML+= '<div class="checklist-item"> <input type="checkbox"  id="' + topicID + '"> ' + topic.title + ' (' + topic.ttl + ') </div>';
+      checklistHTML+= '<div class="checklist-item workflow"> <input type="checkbox"  id="' + topicID + '"> ' + topic.title + ' (' + topic.ttl + ') </div>';
     }
 
     $("#overlay-checklist").html(checklistHTML);
