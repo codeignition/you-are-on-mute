@@ -56,6 +56,7 @@
 
         var currentTopicID = 0;
         var startTime = new Date().getTime();
+	$("#topic-" + currentTopicID).parent().addClass("checklist-highlight");
 
         console.log(workflow.topics[currentTopicID].title);
 
@@ -65,9 +66,11 @@
             if(timeElapsed > (workflow.topics[currentTopicID].ttl * 1000)) {
 
                 $("#topic-" + currentTopicID).prop("checked", true);
+		$("#topic-" + currentTopicID).parent().removeClass("checklist-highlight");
 
                 startTime = new Date().getTime();
                 currentTopicID += 1;
+		$("#topic-" + currentTopicID).parent().addClass("checklist-highlight");
                 console.log(workflow.topics[currentTopicID].title)
             }
         }, 1000);

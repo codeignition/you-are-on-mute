@@ -25,3 +25,7 @@
 .checklist-item {
     padding: 10px;
 }
+
+.checklist-highlight {
+    background-color: aqua;
+}
