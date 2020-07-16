@@ -1,31 +1,40 @@
 #overlay {
-    position: fixed;
-    display: none;
-    bottom: 100px;
-    background-color: rgba(0, 0, 0, 0.5);
-    z-index: 2;
-    cursor: pointer;
-    right: 100px;
+  position: fixed;
+  display: none;
+  bottom: 100px;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 2;
+  cursor: pointer;
+  right: 100px;
 }
 
 #overlay-add-agenda {
-    margin: 10px;
-    padding: 10px;
-    background-color: #27874c;
-    color: white;
+  margin: 10px;
+  padding: 10px;
+  background-color: #27874c;
+  color: white;
 }
 
 #overlay-checklist {
-    position: fixed;
-    top: 200px;
-    z-index: 2;
-    left: 100px;
+  position: fixed;
+  top: 200px;
+  z-index: 2;
+  left: 100px;
+}
+
+#overlay-timecheck {
+  display: none;
+  position: fixed;
+  z-index: 2;
+  bottom: 100px;
+  color: red;
+  left:20px;
 }
 
 .checklist-item {
-    padding: 10px;
+  padding: 10px;
 }
 
 .checklist-highlight {
-    background-color: aqua;
+  background-color: aqua;
 }
