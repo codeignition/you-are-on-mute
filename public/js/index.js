@@ -81,7 +81,7 @@
                                 success: function (res) {
                                     $('#nav-tool').hide();
                                     console.log('join meeting success');
-                                    $('#overlay').css("display", "block");
+                                    window.WorkFlowJS.start();
                                     console.log('showing overlay')
                                 },
                                 error: function (res) {
