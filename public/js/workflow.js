@@ -37,6 +37,15 @@
       ]
     };
 
+  const overlayAddAgendaButton = '<div id="overlay"><button id="overlay-add-agenda">Add Agenda</button></div>';
+  const checkListContainer = '<div id="overlay-checklist"></div>';
+  const timeCheckContainer = '<div id="overlay-timecheck"><h2>this is a timecheck</h2><img src="/images/timecheck.png"></div>';
+
+  var workflowContainers = overlayAddAgendaButton +  checkListContainer + timeCheckContainer;
+
+  $( "body" ).append( workflowContainers );
+
+
 
   $("#overlay-add-agenda").click(function() {
 
