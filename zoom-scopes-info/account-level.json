@@ -1,0 +1,1474 @@
+{
+  "scopes": [
+    {
+      "id": "account:master",
+      "idNo": 66,
+      "name": "View and manage sub accounts",
+      "level": "account",
+      "type": "Account",
+      "dynamicScopes": [
+        "zms:account:read",
+        "zms:account:write"
+      ],
+      "permissions": [
+        "SubAccount:Edit",
+        "SubAccount:Read"
+      ],
+      "masterPermissions": null,
+      "userScope": null,
+      "accountScope": null,
+      "masterScope": null,
+      "deprecated": false,
+      "extraConsentRequired": false,
+      "desc": null,
+      "docId": "account-scopes",
+      "public": true,
+      "userLevel": false,
+      "accountLevel": true
+    },
+    {
+      "id": "account:read:admin",
+      "idNo": 32,
+      "name": "View account info",
+      "level": "account",
+      "type": "Account",
+      "dynamicScopes": [
+        "zms:account:read"
+      ],
+      "permissions": [
+        "AccountProfile:Read",
+        "AccountSetting:Read"
+      ],
+      "masterPermissions": null,
+      "userScope": null,
+      "accountScope": null,
+      "masterScope": null,
+      "deprecated": false,
+      "extraConsentRequired": false,
+      "desc": null,
+      "docId": "account-scopes",
+      "public": true,
+      "userLevel": false,
+      "accountLevel": true
+    },
+    {
+      "id": "account:write:admin",
+      "idNo": 33,
+      "name": "View and manage account info",
+      "level": "account",
+      "type": "Account",
+      "dynamicScopes": [
+        "zms:account:write"
+      ],
+      "permissions": [
+        "AccountProfile:Edit",
+        "AccountSetting:Edit"
+      ],
+      "masterPermissions": null,
+      "userScope": null,
+      "accountScope": null,
+      "masterScope": null,
+      "deprecated": false,
+      "extraConsentRequired": false,
+      "desc": null,
+      "docId": "account-scopes",
+      "public": true,
+      "userLevel": false,
+      "accountLevel": true
+    },
+    {
+      "id": "billing:master",
+      "idNo": 68,
+      "name": "View and manage sub account's billing info",
+      "level": "account",
+      "type": "Billing",
+      "dynamicScopes": [
+        "zms:billing:read",
+        "zms:billing:write"
+      ],
+      "permissions": [
+        "SubAccount:Edit",
+        "SubAccount:Read"
+      ],
+      "masterPermissions": null,
+      "userScope": null,
+      "accountScope": null,
+      "masterScope": null,
+      "deprecated": false,
+      "extraConsentRequired": false,
+      "desc": null,
+      "docId": "billing-scopes",
+      "public": true,
+      "userLevel": false,
+      "accountLevel": true
+    },
+    {
+      "id": "contact:read:admin",
+      "idNo": 57,
+      "name": "View all users' contacts",
+      "level": "account",
+      "type": "Contacts",
+      "dynamicScopes": [
+        "zms:contact:read"
+      ],
+      "permissions": [
+        "User:Read"
+      ],
+      "masterPermissions": null,
+      "userScope": null,
+      "accountScope": null,
+      "masterScope": null,
+      "deprecated": false,
+      "extraConsentRequired": false,
+      "desc": null,
+      "docId": "contact-scopes",
+      "public": true,
+      "userLevel": false,
+      "accountLevel": true
+    },
+    {
+      "id": "dashboard:master",
+      "idNo": 64,
+      "name": "View sub account's Dashboard data",
+      "level": "account",
+      "type": "Dashboard",
+      "dynamicScopes": [
+        "zms:dashboard:read",
+        "zms:dashboard_crc:read",
+        "zms:dashboard_im:read",
+        "zms:dashboard_meetings:read",
+        "zms:dashboard_webinars:read",
+        "zms:dashboard_zr:read"
+      ],
+      "permissions": [
+        "SubAccount:Edit",
+        "SubAccount:Read"
+      ],
+      "masterPermissions": null,
+      "userScope": null,
+      "accountScope": null,
+      "masterScope": null,
+      "deprecated": false,
+      "extraConsentRequired": false,
+      "desc": null,
+      "docId": "dashboard-scopes",
+      "public": true,
+      "userLevel": false,
+      "accountLevel": true
+    },
+    {
+      "id": "dashboard_crc:read:admin",
+      "idNo": 140,
+      "name": "View all users' usage statistics of CRC",
+      "level": "account",
+      "type": "Dashboard",
+      "dynamicScopes": [
+        "zms:dashboard_crc:read"
+      ],
+      "permissions": [
+        "DashboardCRC:Read"
+      ],
+      "masterPermissions": null,
+      "userScope": null,
+      "accountScope": null,
+      "masterScope": null,
+      "deprecated": false,
+      "extraConsentRequired": false,
+      "desc": null,
+      "docId": "dashboard-scopes",
+      "public": true,
+      "userLevel": false,
+      "accountLevel": true
+    },
+    {
+      "id": "dashboard_home:read:admin",
+      "idNo": 141,
+      "name": "View overview of usage statistics for Meetings and Zoom Rooms",
+      "level": "account",
+      "type": "Dashboard",
+      "dynamicScopes": [
+        "zms:dashboard:read"
+      ],
+      "permissions": [
+        "DashboardHome:Read"
+      ],
+      "masterPermissions": null,
+      "userScope": null,
+      "accountScope": null,
+      "masterScope": null,
+      "deprecated": false,
+      "extraConsentRequired": false,
+      "desc": null,
+      "docId": "dashboard-scopes",
+      "public": true,
+      "userLevel": false,
+      "accountLevel": true
+    },
+    {
+      "id": "dashboard_im:read:admin",
+      "idNo": 130,
+      "name": "View all users' usage statistics of chat messages and message types",
+      "level": "account",
+      "type": "Dashboard",
+      "dynamicScopes": [
+        "zms:dashboard_im:read"
+      ],
+      "permissions": [
+        "DashboardIM:Read"
+      ],
+      "masterPermissions": null,
+      "userScope": null,
+      "accountScope": null,
+      "masterScope": null,
+      "deprecated": false,
+      "extraConsentRequired": false,
+      "desc": null,
+      "docId": "dashboard-scopes",
+      "public": true,
+      "userLevel": false,
+      "accountLevel": true
+    },
+    {
+      "id": "dashboard_meetings:read:admin",
+      "idNo": 127,
+      "name": "View all users' meetings information on Dashboard",
+      "level": "account",
+      "type": "Dashboard",
+      "dynamicScopes": [
+        "zms:dashboard_meetings:read"
+      ],
+      "permissions": [
+        "DashboardMeetings:Read"
+      ],
+      "masterPermissions": null,
+      "userScope": null,
+      "accountScope": null,
+      "masterScope": null,
+      "deprecated": false,
+      "extraConsentRequired": false,
+      "desc": null,
+      "docId": "dashboard-scopes",
+      "public": true,
+      "userLevel": false,
+      "accountLevel": true
+    },
+    {
+      "id": "dashboard_webinars:read:admin",
+      "idNo": 128,
+      "name": "View all users' webinar information on Dashboard",
+      "level": "account",
+      "type": "Dashboard",
+      "dynamicScopes": [
+        "zms:dashboard_webinars:read"
+      ],
+      "permissions": [
+        "DashboardWebinars:Read"
+      ],
+      "masterPermissions": null,
+      "userScope": null,
+      "accountScope": null,
+      "masterScope": null,
+      "deprecated": false,
+      "extraConsentRequired": false,
+      "desc": null,
+      "docId": "dashboard-scopes",
+      "public": true,
+      "userLevel": false,
+      "accountLevel": true
+    },
+    {
+      "id": "dashboard_zr:read:admin",
+      "idNo": 129,
+      "name": "View all users' Zoom Room usage statistics and information",
+      "level": "account",
+      "type": "Dashboard",
+      "dynamicScopes": [
+        "zms:dashboard_zr:read"
+      ],
+      "permissions": [
+        "DashboardZR:Read"
+      ],
+      "masterPermissions": null,
+      "userScope": null,
+      "accountScope": null,
+      "masterScope": null,
+      "deprecated": false,
+      "extraConsentRequired": false,
+      "desc": null,
+      "docId": "dashboard-scopes",
+      "public": true,
+      "userLevel": false,
+      "accountLevel": true
+    },
+    {
+      "id": "group:master",
+      "idNo": 61,
+      "name": "View and manage sub account's groups",
+      "level": "account",
+      "type": "Group",
+      "dynamicScopes": [
+        "zms:group:read",
+        "zms:group:write"
+      ],
+      "permissions": [
+        "SubAccount:Edit",
+        "SubAccount:Read"
+      ],
+      "masterPermissions": null,
+      "userScope": null,
+      "accountScope": null,
+      "masterScope": null,
+      "deprecated": false,
+      "extraConsentRequired": false,
+      "desc": null,
+      "docId": "group-scopes",
+      "public": true,
+      "userLevel": false,
+      "accountLevel": true
+    },
+    {
+      "id": "group:read:admin",
+      "idNo": 34,
+      "name": "View groups",
+      "level": "account",
+      "type": "Group",
+      "dynamicScopes": [
+        "zms:group:read"
+      ],
+      "permissions": [
+        "Group:Read"
+      ],
+      "masterPermissions": null,
+      "userScope": null,
+      "accountScope": null,
+      "masterScope": null,
+      "deprecated": false,
+      "extraConsentRequired": false,
+      "desc": null,
+      "docId": "group-scopes",
+      "public": true,
+      "userLevel": false,
+      "accountLevel": true
+    },
+    {
+      "id": "group:write:admin",
+      "idNo": 35,
+      "name": "View and manage groups",
+      "level": "account",
+      "type": "Group",
+      "dynamicScopes": [
+        "zms:group:write"
+      ],
+      "permissions": [
+        "Group:Edit"
+      ],
+      "masterPermissions": null,
+      "userScope": null,
+      "accountScope": null,
+      "masterScope": null,
+      "deprecated": false,
+      "extraConsentRequired": false,
+      "desc": null,
+      "docId": "group-scopes",
+      "public": true,
+      "userLevel": false,
+      "accountLevel": true
+    },
+    {
+      "id": "h323:read:admin",
+      "idNo": 53,
+      "name": "View all users' H.323 devices",
+      "level": "account",
+      "type": "Devices (H323)",
+      "dynamicScopes": [
+        "zms:device:read"
+      ],
+      "permissions": [
+        "RoomConnector:Read"
+      ],
+      "masterPermissions": null,
+      "userScope": null,
+      "accountScope": null,
+      "masterScope": null,
+      "deprecated": false,
+      "extraConsentRequired": false,
+      "desc": null,
+      "docId": "device-scopes",
+      "public": true,
+      "userLevel": false,
+      "accountLevel": true
+    },
+    {
+      "id": "h323:write:admin",
+      "idNo": 54,
+      "name": "View and manage all users' H.323 devices",
+      "level": "account",
+      "type": "Devices (H323)",
+      "dynamicScopes": [
+        "zms:device:write"
+      ],
+      "permissions": [
+        "RoomConnector:Edit"
+      ],
+      "masterPermissions": null,
+      "userScope": null,
+      "accountScope": null,
+      "masterScope": null,
+      "deprecated": false,
+      "extraConsentRequired": false,
+      "desc": null,
+      "docId": "device-scopes",
+      "public": true,
+      "userLevel": false,
+      "accountLevel": true
+    },
+    {
+      "id": "imchat:bot",
+      "idNo": 45,
+      "name": "Enable Chatbot within Zoom Chat Client",
+      "level": "account",
+      "type": "Chat",
+      "dynamicScopes": [
+        "zms:imchat:bot"
+      ],
+      "permissions": [
+        "IMChatBot:Edit"
+      ],
+      "masterPermissions": null,
+      "userScope": null,
+      "accountScope": null,
+      "masterScope": null,
+      "deprecated": false,
+      "extraConsentRequired": false,
+      "desc": null,
+      "docId": "chabot-scopes",
+      "public": true,
+      "userLevel": false,
+      "accountLevel": true
+    },
+    {
+      "id": "imchat:read:admin",
+      "idNo": 42,
+      "name": "View all users history  and channels",
+      "level": "account",
+      "type": "Chat",
+      "dynamicScopes": null,
+      "permissions": [
+        "IMChatHistory:Read"
+      ],
+      "masterPermissions": null,
+      "userScope": null,
+      "accountScope": null,
+      "masterScope": null,
+      "deprecated": false,
+      "extraConsentRequired": false,
+      "desc": null,
+      "docId": "chat-scopes",
+      "public": true,
+      "userLevel": false,
+      "accountLevel": true
+    },
+    {
+      "id": "imchat:write:admin",
+      "idNo": 43,
+      "name": "Send a chat message to a Zoom Chat user or channel on behalf of a Chatbot",
+      "level": "account",
+      "type": "Chat",
+      "dynamicScopes": null,
+      "permissions": [],
+      "masterPermissions": null,
+      "userScope": null,
+      "accountScope": null,
+      "masterScope": null,
+      "deprecated": false,
+      "extraConsentRequired": false,
+      "desc": null,
+      "docId": "chat-scopes",
+      "public": true,
+      "userLevel": false,
+      "accountLevel": true
+    },
+    {
+      "id": "imcontact:read:admin",
+      "idNo": 44,
+      "name": "Get Zoom Chat contact information for all users",
+      "level": "account",
+      "type": "Chat",
+      "dynamicScopes": null,
+      "permissions": [],
+      "masterPermissions": null,
+      "userScope": null,
+      "accountScope": null,
+      "masterScope": null,
+      "deprecated": false,
+      "extraConsentRequired": false,
+      "desc": null,
+      "docId": "",
+      "public": true,
+      "userLevel": false,
+      "accountLevel": true
+    },
+    {
+      "id": "imgroup:master",
+      "idNo": 62,
+      "name": "View and manage sub account's Zoom Chat Groups",
+      "level": "account",
+      "type": "IM Group",
+      "dynamicScopes": [
+        "zms:imgroup:read",
+        "zms:imgroup:write"
+      ],
+      "permissions": [
+        "SubAccount:Edit",
+        "SubAccount:Read"
+      ],
+      "masterPermissions": null,
+      "userScope": null,
+      "accountScope": null,
+      "masterScope": null,
+      "deprecated": false,
+      "extraConsentRequired": false,
+      "desc": null,
+      "docId": "im-group-scopes",
+      "public": true,
+      "userLevel": false,
+      "accountLevel": true
+    },
+    {
+      "id": "imgroup:read:admin",
+      "idNo": 36,
+      "name": "View Zoom Chat Group information",
+      "level": "account",
+      "type": "IM Group",
+      "dynamicScopes": [
+        "zms:imgroup:read"
+      ],
+      "permissions": [
+        "IMGroups:Read"
+      ],
+      "masterPermissions": null,
+      "userScope": null,
+      "accountScope": null,
+      "masterScope": null,
+      "deprecated": false,
+      "extraConsentRequired": false,
+      "desc": null,
+      "docId": "im-group-scopes",
+      "public": true,
+      "userLevel": false,
+      "accountLevel": true
+    },
+    {
+      "id": "imgroup:write:admin",
+      "idNo": 37,
+      "name": "View and manage Zoom Chat Groups",
+      "level": "account",
+      "type": "IM Group",
+      "dynamicScopes": [
+        "zms:imgroup:write"
+      ],
+      "permissions": [
+        "IMGroups:Edit"
+      ],
+      "masterPermissions": null,
+      "userScope": null,
+      "accountScope": null,
+      "masterScope": null,
+      "deprecated": false,
+      "extraConsentRequired": false,
+      "desc": null,
+      "docId": "im-group-scopes",
+      "public": true,
+      "userLevel": false,
+      "accountLevel": true
+    },
+    {
+      "id": "meeting:master",
+      "idNo": 59,
+      "name": "View and manage sub account's user meetings",
+      "level": "account",
+      "type": "Meeting",
+      "dynamicScopes": [
+        "zms:meeting:read",
+        "zms:meeting:write"
+      ],
+      "permissions": [
+        "SubAccount:Edit",
+        "SubAccount:Read"
+      ],
+      "masterPermissions": null,
+      "userScope": null,
+      "accountScope": null,
+      "masterScope": null,
+      "deprecated": false,
+      "extraConsentRequired": false,
+      "desc": null,
+      "docId": "meeting-scopes",
+      "public": true,
+      "userLevel": false,
+      "accountLevel": true
+    },
+    {
+      "id": "meeting:read:admin",
+      "idNo": 26,
+      "name": "View all user meetings",
+      "level": "account",
+      "type": "Meeting",
+      "dynamicScopes": [
+        "zms:meeting:read"
+      ],
+      "permissions": [
+        "User:Read"
+      ],
+      "masterPermissions": null,
+      "userScope": null,
+      "accountScope": null,
+      "masterScope": null,
+      "deprecated": false,
+      "extraConsentRequired": false,
+      "desc": null,
+      "docId": "meeting-scopes",
+      "public": true,
+      "userLevel": false,
+      "accountLevel": true
+    },
+    {
+      "id": "meeting:write:admin",
+      "idNo": 27,
+      "name": "View and manage all user meetings",
+      "level": "account",
+      "type": "Meeting",
+      "dynamicScopes": [
+        "zms:meeting:write"
+      ],
+      "permissions": [
+        "User:Edit"
+      ],
+      "masterPermissions": null,
+      "userScope": null,
+      "accountScope": null,
+      "masterScope": null,
+      "deprecated": false,
+      "extraConsentRequired": false,
+      "desc": null,
+      "docId": "meeting-scopes",
+      "public": true,
+      "userLevel": false,
+      "accountLevel": true
+    },
+    {
+      "id": "pac:master",
+      "idNo": 67,
+      "name": "View and manage sub account's user personal audio conference info",
+      "level": "account",
+      "type": "PAC",
+      "dynamicScopes": [
+        "zms:pac:read",
+        "zms:pac:write"
+      ],
+      "permissions": [
+        "SubAccount:Edit",
+        "SubAccount:Read"
+      ],
+      "masterPermissions": null,
+      "userScope": null,
+      "accountScope": null,
+      "masterScope": null,
+      "deprecated": false,
+      "extraConsentRequired": false,
+      "desc": null,
+      "docId": "pac-scopes",
+      "public": true,
+      "userLevel": false,
+      "accountLevel": true
+    },
+    {
+      "id": "pac:read:admin",
+      "idNo": 55,
+      "name": "View all users' audio conference info",
+      "level": "account",
+      "type": "PAC",
+      "dynamicScopes": [
+        "zms:pac:read"
+      ],
+      "permissions": [
+        "User:Read"
+      ],
+      "masterPermissions": null,
+      "userScope": null,
+      "accountScope": null,
+      "masterScope": null,
+      "deprecated": false,
+      "extraConsentRequired": false,
+      "desc": null,
+      "docId": "pac-scopes",
+      "public": true,
+      "userLevel": false,
+      "accountLevel": true
+    },
+    {
+      "id": "pac:write:admin",
+      "idNo": 56,
+      "name": "View and manage all users' audio conference info",
+      "level": "account",
+      "type": "PAC",
+      "dynamicScopes": [
+        "zms:pac:write"
+      ],
+      "permissions": [
+        "User:Edit"
+      ],
+      "masterPermissions": null,
+      "userScope": null,
+      "accountScope": null,
+      "masterScope": null,
+      "deprecated": false,
+      "extraConsentRequired": false,
+      "desc": null,
+      "docId": "pac-scopes",
+      "public": true,
+      "userLevel": false,
+      "accountLevel": true
+    },
+    {
+      "id": "phone:read:admin",
+      "idNo": 49,
+      "name": "View all users' phone information",
+      "level": "account",
+      "type": "Phone",
+      "dynamicScopes": [
+        "zms:phone:read"
+      ],
+      "permissions": [
+        "PbxAdmin:Read"
+      ],
+      "masterPermissions": null,
+      "userScope": null,
+      "accountScope": null,
+      "masterScope": null,
+      "deprecated": false,
+      "extraConsentRequired": false,
+      "desc": null,
+      "docId": "phone-scopes",
+      "public": true,
+      "userLevel": false,
+      "accountLevel": true
+    },
+    {
+      "id": "phone:write:admin",
+      "idNo": 50,
+      "name": "View and manage all users' phone information",
+      "level": "account",
+      "type": "Phone",
+      "dynamicScopes": [
+        "zms:phone:write"
+      ],
+      "permissions": [
+        "PbxAdmin:Edit"
+      ],
+      "masterPermissions": null,
+      "userScope": null,
+      "accountScope": null,
+      "masterScope": null,
+      "deprecated": false,
+      "extraConsentRequired": false,
+      "desc": null,
+      "docId": "phone-scopes",
+      "public": true,
+      "userLevel": false,
+      "accountLevel": true
+    },
+    {
+      "id": "recording:master",
+      "idNo": 69,
+      "name": "View and manage sub account's user recordings",
+      "level": "account",
+      "type": "Recording",
+      "dynamicScopes": [
+        "zms:recording:read",
+        "zms:recording:write"
+      ],
+      "permissions": [
+        "SubAccount:Edit",
+        "SubAccount:Read"
+      ],
+      "masterPermissions": null,
+      "userScope": null,
+      "accountScope": null,
+      "masterScope": null,
+      "deprecated": false,
+      "extraConsentRequired": false,
+      "desc": null,
+      "docId": "recording-scopes",
+      "public": true,
+      "userLevel": false,
+      "accountLevel": true
+    },
+    {
+      "id": "recording:read:admin",
+      "idNo": 30,
+      "name": "View all user recordings",
+      "level": "account",
+      "type": "Recording",
+      "dynamicScopes": [
+        "zms:recording:read"
+      ],
+      "permissions": [
+        "Recording:Read"
+      ],
+      "masterPermissions": null,
+      "userScope": null,
+      "accountScope": null,
+      "masterScope": null,
+      "deprecated": false,
+      "extraConsentRequired": false,
+      "desc": null,
+      "docId": "recording-scopes",
+      "public": true,
+      "userLevel": false,
+      "accountLevel": true
+    },
+    {
+      "id": "recording:write:admin",
+      "idNo": 31,
+      "name": "View and manage all user recordings",
+      "level": "account",
+      "type": "Recording",
+      "dynamicScopes": [
+        "zms:recording:write"
+      ],
+      "permissions": [
+        "Recording:Edit"
+      ],
+      "masterPermissions": null,
+      "userScope": null,
+      "accountScope": null,
+      "masterScope": null,
+      "deprecated": false,
+      "extraConsentRequired": false,
+      "desc": null,
+      "docId": "recording-scopes",
+      "public": true,
+      "userLevel": false,
+      "accountLevel": true
+    },
+    {
+      "id": "report:master",
+      "idNo": 63,
+      "name": "View sub account's report data",
+      "level": "account",
+      "type": "Report",
+      "dynamicScopes": [
+        "zms:report:read"
+      ],
+      "permissions": [
+        "SubAccount:Edit",
+        "SubAccount:Read"
+      ],
+      "masterPermissions": null,
+      "userScope": null,
+      "accountScope": null,
+      "masterScope": null,
+      "deprecated": false,
+      "extraConsentRequired": false,
+      "desc": null,
+      "docId": "report-scopes",
+      "public": true,
+      "userLevel": false,
+      "accountLevel": true
+    },
+    {
+      "id": "report:read:admin",
+      "idNo": 38,
+      "name": "View report data",
+      "level": "account",
+      "type": "Report",
+      "dynamicScopes": [
+        "zms:report:read"
+      ],
+      "permissions": [
+        "UsageReport:Read"
+      ],
+      "masterPermissions": null,
+      "userScope": null,
+      "accountScope": null,
+      "masterScope": null,
+      "deprecated": false,
+      "extraConsentRequired": false,
+      "desc": null,
+      "docId": "report-scopes",
+      "public": true,
+      "userLevel": false,
+      "accountLevel": true
+    },
+    {
+      "id": "role:master",
+      "idNo": 71,
+      "name": "View and manage sub account user roles",
+      "level": "account",
+      "type": "Role",
+      "dynamicScopes": [
+        "zms:role:read",
+        "zms:role:write"
+      ],
+      "permissions": [
+        "SubAccount:Edit",
+        "SubAccount:Read"
+      ],
+      "masterPermissions": null,
+      "userScope": null,
+      "accountScope": null,
+      "masterScope": null,
+      "deprecated": false,
+      "extraConsentRequired": false,
+      "desc": null,
+      "docId": "roles-scopes",
+      "public": true,
+      "userLevel": false,
+      "accountLevel": true
+    },
+    {
+      "id": "role:read:admin",
+      "idNo": 51,
+      "name": "View all user roles",
+      "level": "account",
+      "type": "Role",
+      "dynamicScopes": [
+        "zms:role:read"
+      ],
+      "permissions": [
+        "Role:Read"
+      ],
+      "masterPermissions": null,
+      "userScope": null,
+      "accountScope": null,
+      "masterScope": null,
+      "deprecated": false,
+      "extraConsentRequired": false,
+      "desc": null,
+      "docId": "roles-scopes",
+      "public": true,
+      "userLevel": false,
+      "accountLevel": true
+    },
+    {
+      "id": "role:write:admin",
+      "idNo": 52,
+      "name": "View and manage all user roles",
+      "level": "account",
+      "type": "Role",
+      "dynamicScopes": [
+        "zms:role:write"
+      ],
+      "permissions": [
+        "Role:Edit"
+      ],
+      "masterPermissions": null,
+      "userScope": null,
+      "accountScope": null,
+      "masterScope": null,
+      "deprecated": false,
+      "extraConsentRequired": false,
+      "desc": null,
+      "docId": "roles-scopes",
+      "public": true,
+      "userLevel": false,
+      "accountLevel": true
+    },
+    {
+      "id": "room:master",
+      "idNo": 77,
+      "name": "View and manage sub account's Zoom Rooms information",
+      "level": "account",
+      "type": "Room",
+      "dynamicScopes": [
+        "zms:room:read",
+        "zms:room:write"
+      ],
+      "permissions": [
+        "SubAccount:Read",
+        "SubAccount:Edit"
+      ],
+      "masterPermissions": null,
+      "userScope": null,
+      "accountScope": null,
+      "masterScope": null,
+      "deprecated": false,
+      "extraConsentRequired": false,
+      "desc": null,
+      "docId": "room-scopes",
+      "public": true,
+      "userLevel": false,
+      "accountLevel": true
+    },
+    {
+      "id": "room:read:admin",
+      "idNo": 72,
+      "name": "View all users' Zoom Rooms information",
+      "level": "account",
+      "type": "Room",
+      "dynamicScopes": [
+        "zms:room:read"
+      ],
+      "permissions": [
+        "ZoomRooms:Read"
+      ],
+      "masterPermissions": null,
+      "userScope": null,
+      "accountScope": null,
+      "masterScope": null,
+      "deprecated": false,
+      "extraConsentRequired": false,
+      "desc": null,
+      "docId": "room-scopes",
+      "public": true,
+      "userLevel": false,
+      "accountLevel": true
+    },
+    {
+      "id": "room:write:admin",
+      "idNo": 73,
+      "name": "View and manage all users' Zoom Rooms information",
+      "level": "account",
+      "type": "Room",
+      "dynamicScopes": [
+        "zms:room:write"
+      ],
+      "permissions": [
+        "ZoomRooms:Edit"
+      ],
+      "masterPermissions": null,
+      "userScope": null,
+      "accountScope": null,
+      "masterScope": null,
+      "deprecated": false,
+      "extraConsentRequired": false,
+      "desc": null,
+      "docId": "room-scopes",
+      "public": true,
+      "userLevel": false,
+      "accountLevel": true
+    },
+    {
+      "id": "scim2",
+      "idNo": 41,
+      "name": "Call Zoom SCIM2 API",
+      "level": "account",
+      "type": "SCIM2",
+      "dynamicScopes": [
+        "zms:scim2"
+      ],
+      "permissions": [
+        "User:Edit"
+      ],
+      "masterPermissions": null,
+      "userScope": null,
+      "accountScope": null,
+      "masterScope": null,
+      "deprecated": false,
+      "extraConsentRequired": false,
+      "desc": null,
+      "docId": "scim-scopes",
+      "public": true,
+      "userLevel": false,
+      "accountLevel": true
+    },
+    {
+      "id": "sip_phone:master",
+      "idNo": 76,
+      "name": "View and manage sub account's SIP phone information",
+      "level": "account",
+      "type": "SIP Phone",
+      "dynamicScopes": [
+        "zms:sip_phone:read",
+        "zms:sip_phone:write"
+      ],
+      "permissions": [
+        "SubAccount:Read",
+        "SubAccount:Edit"
+      ],
+      "masterPermissions": null,
+      "userScope": null,
+      "accountScope": null,
+      "masterScope": null,
+      "deprecated": false,
+      "extraConsentRequired": false,
+      "desc": null,
+      "docId": "sip-phone-scopes",
+      "public": true,
+      "userLevel": false,
+      "accountLevel": true
+    },
+    {
+      "id": "sip_phone:read:admin",
+      "idNo": 74,
+      "name": "View all users' SIP phone information",
+      "level": "account",
+      "type": "SIP Phone",
+      "dynamicScopes": [
+        "zms:sip_phone:read"
+      ],
+      "permissions": [
+        "SipPhone:Read"
+      ],
+      "masterPermissions": null,
+      "userScope": null,
+      "accountScope": null,
+      "masterScope": null,
+      "deprecated": false,
+      "extraConsentRequired": false,
+      "desc": null,
+      "docId": "sip-phone-scopes",
+      "public": true,
+      "userLevel": false,
+      "accountLevel": true
+    },
+    {
+      "id": "sip_phone:write:admin",
+      "idNo": 75,
+      "name": "View and manage all users' SIP phone information",
+      "level": "account",
+      "type": "SIP Phone",
+      "dynamicScopes": [
+        "zms:sip_phone:write"
+      ],
+      "permissions": [
+        "SipPhone:Edit"
+      ],
+      "masterPermissions": null,
+      "userScope": null,
+      "accountScope": null,
+      "masterScope": null,
+      "deprecated": false,
+      "extraConsentRequired": false,
+      "desc": null,
+      "docId": "sip-phone-scopes",
+      "public": true,
+      "userLevel": false,
+      "accountLevel": true
+    },
+    {
+      "id": "sip_trunk:master",
+      "idNo": 142,
+      "name": "View and manage sub account's SIP trunk information",
+      "level": "account",
+      "type": "SIP Trunk",
+      "dynamicScopes": [
+        "zms:sip_trunk:read",
+        "zms:sip_trunk:write"
+      ],
+      "permissions": [
+        "SubAccount:Read",
+        "SubAccount:Edit"
+      ],
+      "masterPermissions": null,
+      "userScope": null,
+      "accountScope": null,
+      "masterScope": null,
+      "deprecated": false,
+      "extraConsentRequired": false,
+      "desc": null,
+      "docId": "sip-trunk-scopes",
+      "public": true,
+      "userLevel": false,
+      "accountLevel": true
+    },
+    {
+      "id": "tracking_fields:master",
+      "idNo": 70,
+      "name": "View and manage sub account user tracking fields",
+      "level": "account",
+      "type": "TrackingField",
+      "dynamicScopes": [
+        "zms:tracking_field:read",
+        "zms:tracking_field:write"
+      ],
+      "permissions": [
+        "SubAccount:Edit",
+        "SubAccount:Read"
+      ],
+      "masterPermissions": null,
+      "userScope": null,
+      "accountScope": null,
+      "masterScope": null,
+      "deprecated": false,
+      "extraConsentRequired": false,
+      "desc": null,
+      "docId": "tracking-field-scopes",
+      "public": true,
+      "userLevel": false,
+      "accountLevel": true
+    },
+    {
+      "id": "tracking_fields:read:admin",
+      "idNo": 47,
+      "name": "View all users' tracking fields",
+      "level": "account",
+      "type": "TrackingField",
+      "dynamicScopes": [
+        "zms:tracking_field:read"
+      ],
+      "permissions": [
+        "ScheduleTrackingFields:Read"
+      ],
+      "masterPermissions": null,
+      "userScope": null,
+      "accountScope": null,
+      "masterScope": null,
+      "deprecated": false,
+      "extraConsentRequired": false,
+      "desc": null,
+      "docId": "tracking-field-scopes",
+      "public": true,
+      "userLevel": false,
+      "accountLevel": true
+    },
+    {
+      "id": "tracking_fields:write:admin",
+      "idNo": 48,
+      "name": "View and manage all users' tracking fields",
+      "level": "account",
+      "type": "TrackingField",
+      "dynamicScopes": [
+        "zms:tracking_field:write"
+      ],
+      "permissions": [
+        "ScheduleTrackingFields:Edit"
+      ],
+      "masterPermissions": null,
+      "userScope": null,
+      "accountScope": null,
+      "masterScope": null,
+      "deprecated": false,
+      "extraConsentRequired": false,
+      "desc": null,
+      "docId": "tracking-field-scopes",
+      "public": true,
+      "userLevel": false,
+      "accountLevel": true
+    },
+    {
+      "id": "tsp:master",
+      "idNo": 65,
+      "name": "View and manage sub account's TSP account info",
+      "level": "account",
+      "type": "TSP",
+      "dynamicScopes": [
+        "zms:tsp:read",
+        "zms:tsp:write"
+      ],
+      "permissions": [
+        "SubAccount:Edit",
+        "SubAccount:Read"
+      ],
+      "masterPermissions": null,
+      "userScope": null,
+      "accountScope": null,
+      "masterScope": null,
+      "deprecated": false,
+      "extraConsentRequired": false,
+      "desc": null,
+      "docId": "tsp-scopes",
+      "public": true,
+      "userLevel": false,
+      "accountLevel": true
+    },
+    {
+      "id": "tsp:read:admin",
+      "idNo": 39,
+      "name": "View TSP info",
+      "level": "account",
+      "type": "TSP",
+      "dynamicScopes": [
+        "zms:tsp:read"
+      ],
+      "permissions": [
+        "User:Read"
+      ],
+      "masterPermissions": null,
+      "userScope": null,
+      "accountScope": null,
+      "masterScope": null,
+      "deprecated": false,
+      "extraConsentRequired": false,
+      "desc": null,
+      "docId": "tsp-scopes",
+      "public": true,
+      "userLevel": false,
+      "accountLevel": true
+    },
+    {
+      "id": "tsp:write:admin",
+      "idNo": 40,
+      "name": "View and manage TSP info",
+      "level": "account",
+      "type": "TSP",
+      "dynamicScopes": [
+        "zms:tsp:write"
+      ],
+      "permissions": [
+        "User:Edit"
+      ],
+      "masterPermissions": null,
+      "userScope": null,
+      "accountScope": null,
+      "masterScope": null,
+      "deprecated": false,
+      "extraConsentRequired": false,
+      "desc": null,
+      "docId": "tsp-scopes",
+      "public": true,
+      "userLevel": false,
+      "accountLevel": true
+    },
+    {
+      "id": "user:master",
+      "idNo": 58,
+      "name": "View and manage sub account's user information",
+      "level": "account",
+      "type": "User",
+      "dynamicScopes": [
+        "zms:user:read",
+        "zms:user:write"
+      ],
+      "permissions": [
+        "SubAccount:Edit",
+        "SubAccount:Read"
+      ],
+      "masterPermissions": null,
+      "userScope": null,
+      "accountScope": null,
+      "masterScope": null,
+      "deprecated": false,
+      "extraConsentRequired": false,
+      "desc": null,
+      "docId": "user-scopes",
+      "public": true,
+      "userLevel": false,
+      "accountLevel": true
+    },
+    {
+      "id": "user:read:admin",
+      "idNo": 24,
+      "name": "View all user information",
+      "level": "account",
+      "type": "User",
+      "dynamicScopes": [
+        "zms:user:read"
+      ],
+      "permissions": [
+        "User:Read"
+      ],
+      "masterPermissions": null,
+      "userScope": null,
+      "accountScope": null,
+      "masterScope": null,
+      "deprecated": false,
+      "extraConsentRequired": false,
+      "desc": null,
+      "docId": "user-scopes",
+      "public": true,
+      "userLevel": false,
+      "accountLevel": true
+    },
+    {
+      "id": "user:write:admin",
+      "idNo": 25,
+      "name": "View users information and manage users",
+      "level": "account",
+      "type": "User",
+      "dynamicScopes": [
+        "zms:user:write"
+      ],
+      "permissions": [
+        "User:Edit"
+      ],
+      "masterPermissions": null,
+      "userScope": null,
+      "accountScope": null,
+      "masterScope": null,
+      "deprecated": false,
+      "extraConsentRequired": false,
+      "desc": null,
+      "docId": "user-scopes",
+      "public": true,
+      "userLevel": false,
+      "accountLevel": true
+    },
+    {
+      "id": "webinar:master",
+      "idNo": 60,
+      "name": "View and manage sub account's user webinars",
+      "level": "account",
+      "type": "Webinar",
+      "dynamicScopes": [
+        "zms:webinar:read",
+        "zms:webinar:write"
+      ],
+      "permissions": [
+        "SubAccount:Edit",
+        "SubAccount:Read"
+      ],
+      "masterPermissions": null,
+      "userScope": null,
+      "accountScope": null,
+      "masterScope": null,
+      "deprecated": false,
+      "extraConsentRequired": false,
+      "desc": null,
+      "docId": "webinar-scopes",
+      "public": true,
+      "userLevel": false,
+      "accountLevel": true
+    },
+    {
+      "id": "webinar:read:admin",
+      "idNo": 28,
+      "name": "View all user Webinars",
+      "level": "account",
+      "type": "Webinar",
+      "dynamicScopes": [
+        "zms:webinar:read"
+      ],
+      "permissions": [
+        "User:Read"
+      ],
+      "masterPermissions": null,
+      "userScope": null,
+      "accountScope": null,
+      "masterScope": null,
+      "deprecated": false,
+      "extraConsentRequired": false,
+      "desc": null,
+      "docId": "webinar-scopes",
+      "public": true,
+      "userLevel": false,
+      "accountLevel": true
+    },
+    {
+      "id": "webinar:write:admin",
+      "idNo": 29,
+      "name": "View and manage all user Webinars",
+      "level": "account",
+      "type": "Webinar",
+      "dynamicScopes": [
+        "zms:webinar:write"
+      ],
+      "permissions": [
+        "User:Edit"
+      ],
+      "masterPermissions": null,
+      "userScope": null,
+      "accountScope": null,
+      "masterScope": null,
+      "deprecated": false,
+      "extraConsentRequired": false,
+      "desc": null,
+      "docId": "webinar-scopes",
+      "public": true,
+      "userLevel": false,
+      "accountLevel": true
+    }
+  ],
+  "timeToApproval": 7
+}
